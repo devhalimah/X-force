@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', serif, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #060322;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(7%, rgba(4, 23, 104, 0.685)), color-stop(50%, #091025), to(rgba(165, 71, 17, 0.212)));
+  background: linear-gradient(rgba(4, 23, 104, 0.685) 7%, #091025 50%, rgba(165, 71, 17, 0.212));
+  z-index: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlay .primary {
+  color: #ff7543;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1300px;
+  min-height: 300px;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper {
+    padding: 10px;
+  }
+}
+
+.wrapper .text {
+  max-width: 900px;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  -webkit-transition: -webkit-animation 0.5s;
+  transition: -webkit-animation 0.5s;
+  transition: animation 0.5s;
+  transition: animation 0.5s, -webkit-animation 0.5s;
+  color: #e7eaf5;
+}
+
+.wrapper .text h2 {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 1.755px;
+  text-transform: uppercase;
+  -webkit-animation: drop 0.5s ease forwards 0.5s;
+          animation: drop 0.5s ease forwards 0.5s;
+  opacity: 0;
+  color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper .text h2 {
+    font-size: 35px;
+    max-width: 300px;
+    margin: 12px auto 30px;
+  }
+}
+
+@-webkit-keyframes drop {
+  from {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes drop {
+  from {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.wrapper .text .intro {
+  -webkit-animation: fade-in 0.5s linear forwards 1s;
+          animation: fade-in 0.5s linear forwards 1s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper .btn {
+  text-decoration: none;
+  width: 120px;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  margin: 60px auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8d2818), color-stop(#14161e), to(#782d0c));
+  background: linear-gradient(#8d2818, #14161e, #782d0c);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper .btn:hover {
+  opacity: 0.9;
+}
+
+.wrapper .btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.form {
+  position: relative;
+  margin: 6em auto 0;
+  height: 100%;
+  letter-spacing: 1.744px;
+}
+
+.form .header {
+  margin-bottom: 70px;
+}
+
+.form .contain {
+  height: 140px;
+  margin-bottom: 20px;
+}
+
+.form .fields {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+
+.form .fields.v {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-animation: fade-in 0.5s ease;
+          animation: fade-in 0.5s ease;
+}
+
+.form .inputs {
+  position: relative;
+  border-bottom: 1px solid silver;
+  width: 300px;
+  height: 50px;
+  margin: 20px auto 20px;
+}
+
+.form .inputs input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #f0f5ff;
+  padding-top: 15px;
+  padding-left: 12px;
+  font-size: 20px;
+  margin-top: 5px;
+  letter-spacing: 1.5px;
+}
+
+.form .inputs .caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 22px;
+  height: inherit;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.form input:focus + .caption, .form input:valid + .caption {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  font-size: 17px;
+  color: #dbd9d9;
+}
+
+.form .button {
+  max-width: 130px;
+  text-align: center;
+  margin: 40px auto 0;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 8px 0 #07070a;
+          box-shadow: 0 3px 8px 0 #07070a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8d2818), color-stop(#14161e), to(#782d0c));
+  background: linear-gradient(#8d2818, #14161e, #782d0c);
+  color: #fcf5f5;
+  cursor: pointer;
+}
+
+.form .button button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 17px;
+  color: #f5fcf7;
+  display: none;
+}
+
+.form .radioBtn {
+  padding: 0;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  border: none;
+}
+
+.form .radioBtn span {
+  position: relative;
+}
+
+.form .radioBtn input {
+  padding: 0;
+  height: 17px;
+  width: 40px;
+  margin: 0 5px 0 0;
+}
+/*# sourceMappingURL=index.css.map */

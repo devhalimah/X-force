@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Raleway', serif, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(6, 3, 34);
+  color: #fff;
+  text-rendering: optimizeLegibility;
+}
+$lg-screen: 900px;
+$md-screen: 700px;
+$sm-screen: 400px;
+@mixin md-screen {
+  @media only screen and (max-width: $md-screen){
+    @content;
+  }
+}
+@mixin sm-screen {
+  @media only screen and (max-width: $sm-screen){
+    @content;
+  }
+}
+@mixin md-screen {
+  @media only screen and (max-width: $lg-screen){
+    @content;
+  }
+}
