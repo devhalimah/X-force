@@ -34,7 +34,13 @@
     letter-spacing: 1.5px;
     transition: animation 0.5s;
     color: #e7eaf5;
+    @include sm-screen{
+      max-width: 100%;
+   font-size: 17px;
+   font-weight: 300;
+    }
     h2{
+      position: relative;
       margin-bottom: 40px;
       font-weight: 600;
       font-size: 40px;
@@ -45,8 +51,7 @@
       opacity: 0;
       color: #fff;
       @include sm-screen{
-        font-size: 35px;
-        max-width: 300px;
+        font-size: 25px;
         margin: 12px auto 30px;
       }
       @keyframes drop {
@@ -99,8 +104,30 @@
   margin: 6em auto 0;
   height: 100%;
   letter-spacing: 1.744px;
+  .err{
+    border: 1px solid;
+    padding: 10px;
+    top: 100px;
+    position: absolute;
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+  }
   .header{
     margin-bottom: 70px;
+    padding-bottom: 12px;
+    position: relative;
+    &::after{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 70px;
+      border-bottom: 1px solid rgb(255, 255, 255);
+    }
   }
   .contain{
     height: 140px;
@@ -141,6 +168,7 @@
     left: 0;
     bottom: 0;
      font-size: 22px;
+     pointer-events: none;
      height: inherit;
      transition: all 0.5s ease;
      transform: translateY(20px);
@@ -152,7 +180,6 @@
     color: rgb(219, 217, 217);
   }
   .button{
- 
     max-width: 130px;
     text-align: center;
     margin: 40px auto 0;

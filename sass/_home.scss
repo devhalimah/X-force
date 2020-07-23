@@ -1,0 +1,72 @@
+#index{
+  background: linear-gradient(rgba(4, 12, 44, 0.3), rgba(6, 35, 88, 0.3)), url('../src/depth-of-field-photography-of-p-l-a-y-wooden-letter-decors-591652-min.jpg') no-repeat;
+  background-position: bottom;
+  position: relative;
+  background-size: cover;
+  height: 50vh;
+  max-width: 1540px;
+  margin: 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+@include sm-screen{
+  background-position: center;
+}
+
+
+.txt{
+  color: rgb(4, 22, 54);
+  text-align: center;
+}
+.container{
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translate(-50%, 125px);
+  max-width: 800px;
+  width: 100%;
+ background-color: rgb(247, 247, 253);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 0 auto;
+  box-shadow: 0 12px 25px -3px #01092e;
+  @include sm-screen{
+    max-width: 350px;
+    margin: 0 auto;
+    transform: translate(-50%, 250px);
+  }
+  .txt{
+    @extend .txt;
+    font-size: 25px;
+    margin: 12px auto;
+  }
+  ul{
+    position: relative;
+    margin-top: 30px;
+    li{
+      list-style: none;
+      color: #000;
+      margin: 12px;
+      border-bottom: 1px solid rgb(221, 223, 230);
+      padding-bottom: 5px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  .btn{
+    color: #fff;
+    background-color: #0dcf14;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid;
+    width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+}
+}

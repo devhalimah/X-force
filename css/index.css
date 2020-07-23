@@ -78,7 +78,16 @@ body {
   color: #e7eaf5;
 }
 
+@media only screen and (max-width: 400px) {
+  .wrapper .text {
+    max-width: 100%;
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+
 .wrapper .text h2 {
+  position: relative;
   margin-bottom: 40px;
   font-weight: 600;
   font-size: 40px;
@@ -93,8 +102,7 @@ body {
 
 @media only screen and (max-width: 400px) {
   .wrapper .text h2 {
-    font-size: 35px;
-    max-width: 300px;
+    font-size: 25px;
     margin: 12px auto 30px;
   }
 }
@@ -184,8 +192,33 @@ body {
   letter-spacing: 1.744px;
 }
 
+.form .err {
+  border: 1px solid;
+  padding: 10px;
+  top: 100px;
+  position: absolute;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  display: none;
+}
+
 .form .header {
   margin-bottom: 70px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.form .header::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+  width: 70px;
+  border-bottom: 1px solid white;
 }
 
 .form .contain {
@@ -235,6 +268,7 @@ body {
   left: 0;
   bottom: 0;
   font-size: 22px;
+  pointer-events: none;
   height: inherit;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -299,5 +333,99 @@ body {
   height: 17px;
   width: 40px;
   margin: 0 5px 0 0;
+}
+
+#index {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 12, 44, 0.3)), to(rgba(6, 35, 88, 0.3))), url("../src/depth-of-field-photography-of-p-l-a-y-wooden-letter-decors-591652-min.jpg") no-repeat;
+  background: linear-gradient(rgba(4, 12, 44, 0.3), rgba(6, 35, 88, 0.3)), url("../src/depth-of-field-photography-of-p-l-a-y-wooden-letter-decors-591652-min.jpg") no-repeat;
+  background-position: bottom;
+  position: relative;
+  background-size: cover;
+  height: 50vh;
+  max-width: 1540px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 400px) {
+  #index {
+    background-position: center;
+  }
+}
+
+#index .txt, #index .container .txt {
+  color: #041636;
+  text-align: center;
+}
+
+#index .container {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 125px);
+          transform: translate(-50%, 125px);
+  max-width: 800px;
+  width: 100%;
+  background-color: #f7f7fd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 12px 25px -3px #01092e;
+          box-shadow: 0 12px 25px -3px #01092e;
+}
+
+@media only screen and (max-width: 400px) {
+  #index .container {
+    max-width: 350px;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, 250px);
+            transform: translate(-50%, 250px);
+  }
+}
+
+#index .container .txt {
+  font-size: 25px;
+  margin: 12px auto;
+}
+
+#index .container ul {
+  position: relative;
+  margin-top: 30px;
+}
+
+#index .container ul li {
+  list-style: none;
+  color: #000;
+  margin: 12px;
+  border-bottom: 1px solid #dddfe6;
+  padding-bottom: 5px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+#index .container .btn {
+  color: #fff;
+  background-color: #0dcf14;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid;
+  width: 130px;
+  padding: 7px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=index.css.map */
