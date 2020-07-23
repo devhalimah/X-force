@@ -107,9 +107,7 @@
     margin-bottom: 20px;
   }
  .fields{
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
+   position: relative;
    opacity: 0;
    &.v{
     opacity: 1;

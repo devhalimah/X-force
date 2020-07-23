@@ -194,10 +194,7 @@ body {
 }
 
 .form .fields {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  position: relative;
   opacity: 0;
 }
 
