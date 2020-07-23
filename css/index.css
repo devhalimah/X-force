@@ -196,10 +196,12 @@ body {
 .form .fields {
   position: relative;
   opacity: 0;
+  display: none;
 }
 
 .form .fields.v {
   opacity: 1;
+  display: block;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-animation: fade-in 0.5s ease;

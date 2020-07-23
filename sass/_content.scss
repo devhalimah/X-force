@@ -109,8 +109,10 @@
  .fields{
    position: relative;
    opacity: 0;
+   display: none;
    &.v{
     opacity: 1;
+    display: block;
   transition: all 0.5s ease;
   animation: fade-in 0.5s ease;
   }
